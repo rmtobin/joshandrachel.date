@@ -102,8 +102,14 @@ main {
   top: 29px;
 }
 
-.our-story {
+.our-story, 
+.gifts,
+.reception {
   display: flex;
+  color: white;
+}
+
+.our-story {
   background: #a1d6d6;
 }
 
@@ -111,33 +117,59 @@ main {
   width: 50%;
   height: 100%;
   background-size: cover;
-  background-image: url(./images/royalty.jpg);
+  background-image: url(./images/dc.jpg);
   background-repeat: no-repeat;
-  background-position: 70%;
+  background-position: 10%;
 }
 
 .our-story-text {
   width: 50%;
-  padding: 30px;
-  color: white;
 }
 
+.our-story-text,
+.reception-text,
+.gifts-text {
+  padding: 30px;
+}
+
+
+.gifts-header > span,
+.reception-header > span,
 .our-story-header > span {
   display: block;
   line-height: 78px
 }
 
+.gifts-header > span:first-of-type,
+.reception-header > span:first-of-type,
 .our-story-header > span:first-of-type {
   font-size: 130px;
+}
+
+.our-story-header > span:first-of-type {
   color: #78a1a1;
 }
 
+.gifts-header > span:first-of-type {
+  color: #fdca22;
+}
+
+.reception-header > span:first-of-type {
+  color: #4b87cf;
+}
+
+.gifts-header > span:last-of-type,
+.reception-header > span:last-of-type,
 .our-story-header > span:last-of-type {
   font-size: 62px;
   padding-left: 125px;
   position: relative;
 }
 
+.gifts-header > span:last-of-type:before,
+.gifts-header > span:last-of-type:after,
+.reception-header > span:last-of-type:before,
+.reception-header > span:last-of-type:after,
 .our-story-header > span:last-of-type:before,
 .our-story-header > span:last-of-type:after {
   position: absolute;
@@ -147,28 +179,30 @@ main {
   top: 55%;
 }
 
+.gifts-header > span:last-of-type:before,
+.reception-header > span:last-of-type:before,
 .our-story-header > span:last-of-type:before {
   left: 0;
   width: 120px;
 }
 
+.gifts-header > span:last-of-type:after,
+.reception-header > span:last-of-type:after,
 .our-story-header > span:last-of-type:after {
   right: 50px;
   width: 250px;
 }
 
+.gifts-body,
+.reception-body,
 .our-story-body {
   font-size: 18px;
 }
 
 .reception {
   background: #9dbbdf;
-  color: white;
 }
 
-.reception-title {
-  color: #4b87cf;
-}
 
 /* #9dbbdf
 #7B88E8
@@ -176,5 +210,15 @@ main {
 #FF9E80 */
 
 .gifts {
-  background: #9F98EB;
+  background: #fee9a0;
 }
+
+
+
+/* 
+
+FFC2A0
+A1D1FF
+252399
+6E6CCC
+*/
