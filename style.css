@@ -1,8 +1,6 @@
 body {
-  /* background: #6ECC89; */
   background: white;
   font-family: 'Playfair Display', serif;
-  /* color: #FAB4AB; #FFC2A0*/ 
   margin: 0;
   box-sizing: border-box;
 }
@@ -48,9 +46,9 @@ body {
 main {
   width: 100%;
   height: calc(100% - 50px);
-
   position: relative;
 }
+
 .home-page {
   background-image: url('./images/sunset.jpg');
   background-size: 100%;
@@ -63,9 +61,7 @@ main {
   right: 150px;
   top: 150px;
   padding: 25px;
-  /* background: #6ECC89; */
-  background: rgba(110, 204, 137, 0.85);
-
+  background: #6ECC89;
 }
 
 .home-page-names {
