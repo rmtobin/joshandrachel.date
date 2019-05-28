@@ -52,6 +52,7 @@ main {
 .home-page {
   background-image: url('./images/sunset.jpg');
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .home-page-text {
