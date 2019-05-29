@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: white;
   font-family: 'Playfair Display', serif;
   margin: 0;
-  box-sizing: border-box;
+  padding-top: 49px;
 }
 
 .header-nav {
@@ -11,6 +15,11 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 15px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .header-nav-list {
@@ -28,7 +37,13 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 .header-nav-list-item.active-page {
+  cursor: default;
+}
+.header-nav-list-item.active-page > a {
   color: #FFC2A0;
+}
+
+.header-nav-list-item.active-page > a:disabled {
   cursor: default;
 }
 
@@ -45,8 +60,23 @@ body {
 
 main {
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 49px);
   position: relative;
+}
+
+main > section {
+  height: calc(100% + 50px);
+  position: relative;
+}
+
+.home-section-anchor {
+  position: absolute;
+  top: -49px;
+}
+
+.section-anchor {
+  position: absolute;
+  bottom: 49px;
 }
 
 .home-page {
@@ -88,11 +118,13 @@ main {
   position: absolute;
   right: -28px;
 }
+
 .home-page-title:before {
   border-width: 28px 28px 0 0;
   border-color: #ffc1a0 transparent transparent transparent;
   top: 0;
 }
+
 .home-page-title:after {
   border-width: 28px 0 0 28px;
   border-color: transparent transparent transparent #ffc1a0;
@@ -106,7 +138,7 @@ main {
   color: white;
 }
 
-.our-story {
+section.our-story {
   background: #a1d6d6;
 }
 
@@ -128,7 +160,6 @@ main {
 .gifts-text {
   padding: 30px;
 }
-
 
 .gifts-header > span,
 .reception-header > span,
@@ -196,26 +227,84 @@ main {
   font-size: 18px;
 }
 
-.reception {
+section.reception {
   background: #9dbbdf;
 }
 
-
-/* #9dbbdf
-#7B88E8
-#E8847B
-#FF9E80 */
-
-.gifts {
+section.gifts {
   background: #fee9a0;
 }
 
 
+@media(max-width: 550px) {
+  body {
+    padding-top: 0;
+  }
+  
+  body,
+  main {
+    height: 100%;
+    overflow-x: hidden;
+  }
 
-/* 
+  main > section {
+    max-width: 100%;
+  }
 
-FFC2A0
-A1D1FF
-252399
-6E6CCC
-*/
+  main > section:not(.home-page) {
+    min-height: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  nav {
+    display: none;
+  }
+
+  .home-page {
+    background-size: cover;
+    height: 100%;
+  }
+
+  .home-page-text {
+    bottom: 75px;
+    left: 15px;
+    right: unset;
+    top: unset;
+    width: 60%;
+    padding: 15px;
+
+  }
+
+  .home-page-names {
+    font-size: 45px;
+  }
+
+  .home-page-title {
+    font-size: 30px;
+    width: 300px;
+    padding: 5px 10px;
+  }
+
+  .home-page-title:before {
+    border-width: 25px 25px 0 0;
+    right: -25px;
+  }
+
+  .home-page-title:after {
+    border-width: 25px 0 0 25px;
+    right: -25px;
+    top: 25px;
+  }
+
+  .our-story-text {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .our-story-image {
+    width: 100%;
+  }
+
+}
