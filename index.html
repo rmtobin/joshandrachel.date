@@ -3,30 +3,113 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width">
     </head>
 
     <body>
         <nav class="header-nav">
             <ul class="header-nav-list">
-                <li class="header-nav-list-item active-page">HOME</li>
-                <li class="header-nav-list-item">
-                    <a href="./our-story.html">OUR STORY</a>
+                <li class="header-nav-list-item home">
+                    <a href="#home">HOME</a>
                 </li>
-                <li class="header-nav-list-item">
-                    <a href="./reception.html">RECEPTION</a>
+                <li class="header-nav-list-item our-story">
+                    <a href="#our-story">OUR STORY</a>
                 </li>
-                <li class="header-nav-list-item">
-                    <a href="./gifts.html">GIFTS</a>
+                <li class="header-nav-list-item reception">
+                    <a href="#reception">RECEPTION</a>
+                </li>
+                <li class="header-nav-list-item gifts">
+                    <a href="#gifts">GIFTS</a>
                 </li>
             </ul>
         </nav>
 
+        <main>
+            <span id="home" class="home-section-anchor"></span>
+            <section class="home-page">
+                <div class="home-page-text">
+                    <div class='home-page-names'>Josh & Rachel</div>
+                    <div class='home-page-title'>Are Getting Married!</div>
+                </div>
+                <span id="our-story" class="section-anchor"></span>
+            </section>
+            <section class="our-story">
+                <div class="our-story-text">
+                    <div class="our-story-header">
+                        <span>Our</span>
+                        <span>Story</span>
+                    </div>
+                    <p class="our-story-body">
+                        We met in 2010 while both working at the Rosedale Apple Store. 
+                        Josh worked back-of-house, and Rachel worked at the Genius Bar. 
+                        Josh found reasons to spend time in the repair room and talk to Rachel about movies and video games.
+                        We chatted on Facebook while we were at Thanksgiving dinners...and then Josh asked Rachel to dinner at The Red Stag in northeast Minneapolis and a movie.
+                        Because we are both shy around new people, neither of us was sure if we were going on a date or hanging out as friends (spoiler: it was a date),
+                        but it soon became clear we "like"-liked each other.
+                            Fast forward a year, we were living together and took a big leap and moved out to Seattle, where things are a bit
+                        more temperate, and tech jobs are in high-demand. Eight years later, we love Seattle (so much we bought a house together there), both work in software, and
+                        decided it was finally time to tie the knot. Josh, being the romantic in the relationship, proposed while hiking at Mt. Rainier at
+                        Mt. Fremont fire lookout, one of our favorite hikes.
+                            Because of our love of nature and adventure, we decided to get married in Iceland just outside of Borgarnes (2 hours north of Reykjavik)
+                        during the summer, when the sun just barely sets, staying light all the way until after midnight. 
+                        To celebrate our nuptials, we're throwing a reception party to celebrate with our friends and family in Minneapolis at
+                        Surly Brewery (see details below).
+                    </p>
+                </div>
+                <div class="our-story-image"></div>   
+                <span id="reception" class="section-anchor"></span>
+            </section>
 
-        <main class="home-page">
-            <div class="home-page-text">
-                <div class='home-page-names'>Josh & Rachel</div>
-                <div class='home-page-title'>Are Getting Married!</div>
-            </div>
+            <section class="reception">
+                <div class="reception-text">
+                    <div class="reception-header">
+                        <span>The</span>
+                        <span>Reception</span>
+                    </div>
+                    <div class="reception-body">
+                        <h3>Location</h3>
+                        <p>Surly Brewing Company</p>
+                        <p>520 Malcom Ave.</p>
+                        <p>Minneapolis, MN 55414</p>
+                    
+                        <h3>Time</h3>
+                        <p>From 11am-4pm</p>
+                    
+                        <h3>Details</h3>
+                        <p>Our reception is an "open house", feel free to stop by anytime, we will be happy to have you.</p>
+                        <p>We will have open Surly Taps, plus a selection of NA, along with finger-foods to enjoy.</p>
+                    </div>
+                </div>
+                <span id="gifts" class="section-anchor"></span>
+            </section>
+            
+            <section class="gifts">
+                <div class="gifts-text">
+                    <div class="gifts-header">
+                        <span>Gift</span>
+                        <span>Giving</span>
+                    </div>
+                    <div class="gifts-body">
+                        <p>
+                            In lieu of gifts, we humbly request those who wish to give to donate to one of our favorite charities.
+                            We've chosen a selection of charities whose causes we feel resonate with us and reflect our values as a couple.
+                        </p>
+                        <h2>Favorite Charities</h2>
+                        <em>All listed charities are 501(c) non-profit and tax-deductible.</em>
+                        <ul>
+                            <li><a href="https://www.aspca.org/">ASPCA</a></li>
+                            <li><a href="http://www.americanhumane.org/">American Humane Society</a></li>
+                            <li><a href="https://www.worldwildlife.org/">World Wildlife Fund</a></li>
+                            <li><a href="https://wta.org">Washington Trails Association</a></li>
+                            <li><a href="https://www.jdrf.org/">JDRF</a></li>
+                            <li><a href="https://girlswhocode.com/">Girls Who Code</a></li>
+                            <li><a href="https://www.eff.org/">Electronic Frontier Foundation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </body>
+    <script src="main.js"></script>
 </html>
