@@ -62,6 +62,8 @@ main {
   width: 100%;
   height: calc(100% - 49px);
   position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 main > section {
