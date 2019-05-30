@@ -57,6 +57,7 @@ function scrollListener() {
       const activeElement = document.querySelector(`.header-nav-list-item.${activeName}`);
       activeElement.classList.add('active-page');
       activeElement.querySelector('a').setAttribute('disabled', true);
+      history.pushState(null, null, currentHash)
     }
   })
 }
