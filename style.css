@@ -6,7 +6,7 @@ body {
   background: white;
   font-family: 'Playfair Display', serif;
   margin: 0;
-  padding-top: 49px;
+  padding-top: 48px;
 }
 
 .header-nav {
@@ -50,24 +50,23 @@ body {
 .header-nav-list-item > a {
   text-decoration: none;
   color: black;
-  transition: color .3s ease; 
+  transition: color .3s ease;
 }
 
 .header-nav-list-item > a:hover {
   color: #FFC2A0;
-
 }
 
 main {
   width: 100%;
-  height: calc(100% - 49px);
+  height: 100%;
   position: relative;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
 main > section {
-  height: calc(100% + 50px);
+  height: 100%;
   position: relative;
 }
 
@@ -78,7 +77,7 @@ main > section {
 
 .section-anchor {
   position: absolute;
-  bottom: 49px;
+  bottom: 0;
 }
 
 .home-page {
@@ -137,23 +136,38 @@ main > section {
 .gifts,
 .reception {
   display: flex;
-  color: white;
 }
 
 section.our-story {
   background: #a1d6d6;
 }
 
-.our-story-image {
+.gifts-image,
+.our-story-image,
+.reception-image {
   width: 50%;
   height: 100%;
   background-size: cover;
-  background-image: url(./images/dc.jpg);
   background-repeat: no-repeat;
+}
+.our-story-image {
+  background-image: url(./images/dc.jpg);
   background-position: 10%;
 }
 
-.our-story-text {
+.reception-image {
+  background-image: url(./images/engaged.jpg);
+  background-position: 0 100%;
+}
+
+.gifts-image {
+  background-image: url(./images/royalty.jpg);
+  background-position: 50%;
+}
+
+.our-story-text,
+.reception-text,
+.gifts-text {
   width: 50%;
 }
 
@@ -178,6 +192,12 @@ section.our-story {
 
 .our-story-header > span:first-of-type {
   color: #78a1a1;
+}
+
+.gifts-header > span:last-of-type,
+.our-story-header > span:last-of-type,
+.reception-header > span:last-of-type {
+  color: #FFFFFF;
 }
 
 .gifts-header > span:first-of-type {
@@ -216,17 +236,78 @@ section.our-story {
   width: 120px;
 }
 
-.gifts-header > span:last-of-type:after,
-.reception-header > span:last-of-type:after,
 .our-story-header > span:last-of-type:after {
-  right: 50px;
+  left: 277px;
   width: 250px;
+}
+
+.reception-header > span:last-of-type:after {
+  left: 410px;
+  width: 138px;
+}
+
+.gifts-header > span:last-of-type:after {
+  left: 308px;
+  width: 220px;
 }
 
 .gifts-body,
 .reception-body,
 .our-story-body {
   font-size: 18px;
+}
+
+.our-story-body {
+  color: #005555;
+  text-shadow: 0 0 1px #005555;
+}
+
+.reception-body {
+  color: #0A3055;
+  text-shadow: 0 0 1px #0A3055;
+  text-align: center;
+}
+
+.gifts-body {
+  color: #634806;
+  text-shadow: 0 0 1px #634806;
+}
+
+.reception-body dt {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.reception-body dt:not(:first-of-type) {
+  margin-top: 35px;
+}
+
+.reception-body dd {
+  margin-left: 0;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-shadow: 0 0 1px #ffffff;
+}
+.receiption-directions-link {
+  color: #0A3055;
+  text-decoration: none;
+}
+
+.receiption-directions-link:hover {
+  color: #4b87cf;
+  text-shadow: 0 0 1px #4b87cf;
+  transition: color .3s ease;
+}
+
+.charity-link {
+  color: #634806;
+  text-shadow: 0 0 1px #634806;
+  transition: color .3s ease;
+}
+
+.charity-link:hover {
+  color: #34515E;
+  text-shadow: 0 0 1px #34515E;
 }
 
 section.reception {
@@ -237,6 +318,9 @@ section.gifts {
   background: #fee9a0;
 }
 
+.reception-image.mobile {
+  display: none;
+}
 
 @media(max-width: 550px) {
   body {
@@ -259,9 +343,13 @@ section.gifts {
     display: block;
   }
 
+  .header-nav-list {
+    justify-content: space-around;
+  }
 
-  nav {
-    display: none;
+  .header-nav-list-item {
+    font-size: 12px;
+    margin: 0 10px;
   }
 
   .home-page {
@@ -276,7 +364,6 @@ section.gifts {
     top: unset;
     width: 60%;
     padding: 15px;
-
   }
 
   .home-page-names {
@@ -300,13 +387,64 @@ section.gifts {
     top: 25px;
   }
 
-  .our-story-text {
-    padding: 10px;
+  .gifts-text,
+  .our-story-text,
+  .reception-text {
+    padding: 25px 15px 0;
     width: 100%;
   }
 
-  .our-story-image {
+  .section-anchor {
+    bottom: 40px;
+  }
+  
+  .gifts-image,
+  .our-story-image,
+  .reception-image {
     width: 100%;
   }
 
+  .gifts-header > span:first-of-type,
+  .reception-header > span:first-of-type,
+  .our-story-header > span:first-of-type {
+    font-size: 90px;
+    line-height: 55px;
+  }
+
+  .gifts-header > span:last-of-type,
+  .reception-header > span:last-of-type,
+  .our-story-header > span:last-of-type {
+    font-size: 42px;
+    padding-left: 55px;
+  }
+
+  .gifts-header > span:last-of-type:before,
+  .reception-header > span:last-of-type:before,
+  .our-story-header > span:last-of-type:before {
+    width: 50px;
+  }
+
+  .our-story-header > span:last-of-type:after {
+    left: 160px;
+    width: 170px;
+  }
+
+  .reception-header > span:last-of-type:after {
+    left: 250px;
+    width: 95px;
+  }
+
+  .gifts-header > span:last-of-type:after {
+    left: 183px;
+    width: 160px;
+  }
+
+  .reception-image.desktop {
+    display: none;
+  }
+
+  .reception-image.mobile {
+    display: block;
+    background-position: 100%;
+  }
 }
